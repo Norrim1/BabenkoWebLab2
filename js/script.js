@@ -1,4 +1,7 @@
 $(function () {
+    let index = 0;
+    const cards = $('.skill-card');
+
     $('.burger').on('click', function () {
       $('.nav').slideToggle();
     });
@@ -39,5 +42,29 @@ $(function () {
             </div>
             `);
         });
-    });      
+    });
+    
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 600);
+    });
+    
+    $('.section').hide().fadeIn(1000);
+
+    function showSkill(i) {
+    cards.hide().eq(i).fadeIn();
+    }
+
+    showSkill(index);
+
+    setInterval(() => {
+    index = (index + 1) % cards.length;
+    showSkill(index);
+    }, 3000);
+
+    $('#toTop').click(() => {
+        $('html, body').animate({ scrollTop: 0 }, 600);
+    });
 });

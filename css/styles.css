@@ -87,6 +87,7 @@ h2 {
 .portfolio-card {
   border: 1px solid #ddd;
   padding: 15px;
+  text-align: center;
 }
 
 .image-placeholder {
@@ -120,7 +121,7 @@ h2 {
   color: #fff;
 }
 
-#openModal {
+.btn {
   display: block;
   margin: 30px auto 0;
   padding: 12px 24px;
