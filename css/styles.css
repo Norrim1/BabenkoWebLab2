@@ -120,6 +120,82 @@ h2 {
   color: #fff;
 }
 
+#openModal {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 24px;
+  background-color: #7e63f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#openModal:hover {
+  background-color: #7a7cee;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  margin: 100px auto;
+  width: 300px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#feedbackForm input,
+#feedbackForm textarea {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#feedbackForm input:focus,
+#feedbackForm textarea:focus {
+  border-color: #7a7cee;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+#feedbackForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#feedbackForm button[type="submit"] {
+  padding: 12px;
+  background-color: #7e63f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#feedbackForm button[type="submit"]:hover {
+  background-color: #7a7cee;
+}
+
 @media (max-width: 767px) {
   .header__inner {
     flex-direction: column;
